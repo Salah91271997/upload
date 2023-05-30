@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-8">
+      <form [formGroup]="numberForm" (submit)="onSubmit()">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="text-center">Number Form</h2>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="field1">Field 1</label>
+                  <input
+                    id="field1"
+                    type="number"
+                    class="form-control"
+                    formControlName="field1"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="field2">Field 2</label>
+                  <input
+                    id="field2"
+                    type="number"
+                    class="form-control"
+                    formControlName="field2"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="field3">Field 3</label>
+                  <input
+                    id="field3"
+                    type="number"
+                    class="form-control"
+                    formControlName="field3"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="field4">Field 4</label>
+                  <input
+                    id="field4"
+                    type="number"
+                    class="form-control"
+                    formControlName="field4"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="field5">Field 5</label>
+                  <input
+                    id="field5"
+                    type="number"
+                    class="form-control"
+                    formControlName="field5"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
