@@ -21,16 +21,14 @@ export class LoginComponent implements OnInit {
   onFileSelected(event: any) {
     const files: FileList = event.target.files;
     if (files.length > 0) {
-      for (let i = 0; i < files.length; i++) {
-        const file = files[i];
-        this.selectedFiles.push(file);
-        this.selectedFileNames.push(file.name);
-        const reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = () => {
-          this.selectedFileUrls.push(reader.result as string);
-        };
-      }
+      const file = files[0]; // only use the first file
+      this.selectedFiles = [file];
+      this.selectedFileNames = [file.name];
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        this.selectedFileUrls = [reader.result as string];
+      };
     }
   }
   getSelectedFileUrl(file: File): string {

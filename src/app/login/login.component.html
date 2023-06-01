@@ -6,14 +6,13 @@
       class="form-control"
       id="inputGroupFile01"
       (change)="onFileSelected($event)"
-      multiple
     />
   </div>
   <div class="con" *ngIf="selectedFiles.length > 0">
-    <div class="con1" *ngFor="let file of selectedFiles">
-      <p>{{ file.name }}</p>
+    <div class="con1">
+      <p>{{ selectedFileNames[0] }}</p>
       <img
-        [src]="getSelectedFileUrl(file)"
+        [src]="selectedFileUrls[0]"
         alt="Selected file"
         width="100"
         height="100"
